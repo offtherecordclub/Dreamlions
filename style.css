@@ -78,3 +78,34 @@ body {
   font-size: clamp(12px, 3vw, 16px);
   color: #666;
 }
+
+/* ========================= */
+/* 📱 모바일 반응형 */
+/* ========================= */
+@media (max-width: 768px) {
+  .title {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .bin {
+    width: 300px;
+    bottom: 20px;
+  }
+
+  .item {
+    width: 110px;
+  }
+
+  .text {
+    top: 25%;
+  }
+
+  .main-text {
+    font-size: 18px;
+  }
+
+  .sub-text {
+    font-size: 13px;
+  }
+}
