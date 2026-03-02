@@ -24,60 +24,59 @@ body {
   color: #1f3d2b;
 }
 
-/* 통 전체 영역 */
 .bin {
   position: absolute;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  width: 320px; /* cup.png 크기에 맞게 조절 */
-  height: 260px;
+  width: 500px;
+  height: auto;
 }
 
 /* 바깥 통 이미지 */
 .bin-image {
-  width: 200%;
+  width: 100%;
   display: block;
 }
 
-/* 떨어지는 아이템들 */
+/* 아이템은 bin 기준 */
 .item {
   position: absolute;
-  top: -150px; /* 시작 위치: 위 */
-  /* width: 70px; */
+  top: -150px;
+  width: 190px;
   opacity: 0;
   transition:
-    transform 1s ease,
-    opacity 1s ease;
+    top 1.5s ease,
+    opacity 0.5s ease;
 }
 
-/* 📍 최종 위치 (시안 기준, 필요하면 수치 조절) */
-.item1 {
-  left: 60px;
-  transform: translateY(160px);
-} /* green */
-.item2 {
-  left: 130px;
-  transform: translateY(140px);
-} /* pink */
-.item3 {
-  left: 200px;
-  transform: translateY(120px);
-} /* yellow */
-.item4 {
-  left: 100px;
-  transform: translateY(100px);
-} /* blue */
-
-/* 떨어질 때 */
+/* show 되면 보이게만 */
 .item.show {
   opacity: 1;
 }
 
+/* 📍 최종 위치 (시안 기준, 필요하면 수치 조절) */
+/* .item1 {
+  left: 60px;
+  transform: translateY(160px);
+} 
+.item2 {
+  left: 130px;
+  transform: translateY(140px);
+} 
+.item3 {
+  left: 200px;
+  transform: translateY(120px);
+} 
+.item4 {
+  left: 100px;
+  transform: translateY(100px);
+}  */
+
 /* 문구 영역 */
 .text {
   position: absolute;
-  top: 55%;
+  top: 30%;
   width: 100%;
   text-align: center;
   opacity: 0;
@@ -89,11 +88,11 @@ body {
 }
 
 .main-text {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 6px;
 }
 
 .sub-text {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
 }
