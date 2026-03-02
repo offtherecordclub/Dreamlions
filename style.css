@@ -19,8 +19,8 @@ body {
 
 /* 상단 타이틀 */
 .title {
-  margin-top: 4vh;
-  font-size: clamp(20px, 5vw, 32px);
+  margin-top: 5vh;
+  font-size: clamp(20px, 4vw, 32px);
   color: #1f3d2b;
 }
 
@@ -30,31 +30,27 @@ body {
   bottom: 5vh;
   left: 50%;
   transform: translateX(-50%);
-  width: 60vw;
-  max-width: 500px;
-  min-width: 280px;
+  width: min(90vw, 500px); /* 🔥 핵심 */
+  height: auto;
 }
 
-/* 바깥 통 이미지 */
+/* 컵 이미지 */
 .bin-image {
   width: 100%;
   display: block;
 }
 
-/* 아이템 (컵 기준) */
+/* 아이템 */
 .item {
   position: absolute;
   top: -150px;
-  width: 22vw;
-  max-width: 190px;
-  min-width: 90px;
+  width: min(35vw, 190px); /* 🔥 모바일에서 커지게 */
   opacity: 0;
   transition:
     top 1.5s ease,
     opacity 0.5s ease;
 }
 
-/* show 되면 보이게만 */
 .item.show {
   opacity: 1;
 }
@@ -74,26 +70,11 @@ body {
 }
 
 .main-text {
-  font-size: clamp(16px, 4vw, 24px);
+  font-size: clamp(14px, 4vw, 24px);
   margin-bottom: 6px;
 }
 
 .sub-text {
   font-size: clamp(12px, 3vw, 16px);
   color: #666;
-}
-
-/* 📱 모바일 보정 */
-@media (max-width: 480px) {
-  .bin {
-    width: 120vw;
-  }
-
-  .item {
-    width: 25vw;
-  }
-
-  .text {
-    top: 25%;
-  }
 }
