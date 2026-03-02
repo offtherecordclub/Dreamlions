@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f8f2;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* 상단 타이틀 */
+.title {
+  margin-top: 40px;
+  font-size: 32px;
+  color: #1f3d2b;
+}
+
+/* 통 전체 영역 */
+.bin {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px; /* cup.png 크기에 맞게 조절 */
+  height: 260px;
+}
+
+/* 바깥 통 이미지 */
+.bin-image {
+  width: 100%;
+  display: block;
+}
+
+/* 떨어지는 아이템들 */
+.item {
+  position: absolute;
+  top: -150px; /* 시작 위치: 위 */
+  width: 70px;
+  opacity: 0;
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+}
+
+/* 📍 최종 위치 (시안 기준, 필요하면 수치 조절) */
+.item1 {
+  left: 60px;
+  transform: translateY(160px);
+} /* green */
+.item2 {
+  left: 130px;
+  transform: translateY(140px);
+} /* pink */
+.item3 {
+  left: 200px;
+  transform: translateY(120px);
+} /* yellow */
+.item4 {
+  left: 100px;
+  transform: translateY(100px);
+} /* blue */
+
+/* 떨어질 때 */
+.item.show {
+  opacity: 1;
+}
+
+/* 문구 영역 */
+.text {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.text.show {
+  opacity: 1;
+}
+
+.main-text {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #666;
+}
