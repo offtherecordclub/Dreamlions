@@ -55,24 +55,6 @@ body {
   opacity: 1;
 }
 
-/* 📍 최종 위치 (시안 기준, 필요하면 수치 조절) */
-/* .item1 {
-  left: 60px;
-  transform: translateY(160px);
-} 
-.item2 {
-  left: 130px;
-  transform: translateY(140px);
-} 
-.item3 {
-  left: 200px;
-  transform: translateY(120px);
-} 
-.item4 {
-  left: 100px;
-  transform: translateY(100px);
-}  */
-
 /* 문구 영역 */
 .text {
   position: absolute;
